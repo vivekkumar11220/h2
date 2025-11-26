@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-26SKT7902Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-26SKT7902Y');
+</script>
+</script>
+  <meta charset="UTF-8" />
+  <title>Special Intro with Rocket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      background: radial-gradient(circle, #fff8f0, #e0c3fc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Georgia', serif;
+      overflow: hidden;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    #intro, #messageScreen {
+      text-align: center;
+      animation: popup 0.9s ease-out;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    @keyframes popup {
+      from { transform: scale(0.2); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* Responsive GIF */
+    #intro img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    /* Buttons */
+    button {
+      margin-top: 18px;
+      padding: 12px 26px;
+      font-size: 18px;
+      background-color: #5d4037;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 80%;
+      max-width: 260px;
+    }
+
+    button:hover {
+      background-color: #3e2723;
+    }
+
+    #messageScreen {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Rocket */
+    .rocket {
+      width: 80px;
+      height: 80px;
+      max-width: 22vw;
+      max-height: 22vw;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/5/5f/RedRocketEmoji.png')
+        no-repeat center/contain;
+      animation: flyRocket 2s ease-in-out infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes flyRocket {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    h2 {
+      color: #4e342e;
+      margin-top: 10px;
+      font-size: 24px;
+      padding: 0 10px;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    }
+
+    /* Extra mobile optimization */
+    @media (max-width: 480px) {
+      h2 { font-size: 20px; }
+      button { font-size: 16px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Intro Screen -->
+<div id="intro">
+  <img src="https://media.tenor.com/evfIvK16r8QAAAAi/cake-party.gif"
+       alt="Celebration GIF"
+       onclick="showMessage()" />
+  <h2>Happy Birthday doraemon,Ms india, and panda ji 😂</h2>
+  <button onclick="showMessage()">Next →</button>
+</div>
+
+<!-- Message Screen -->
+<div id="messageScreen">
+  <div class="rocket"></div>
+  <h2>Here is your gift Ms ➡️</h2>
+  <button onclick="goToNextPage()">Open Book →</button>
+</div>
+
+<script>
+  function showMessage() {
+    document.getElementById('intro').style.display = 'none';
+    document.getElementById('messageScreen').style.display = 'flex';
+  }
+
+  function goToNextPage() {
+    window.location.href = "https://h3-nine.vercel.app/";
+  }
+</script>
+</body>
+</html>
